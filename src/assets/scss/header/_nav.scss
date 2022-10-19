@@ -1,3 +1,14 @@
 .nav {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0;
+  gap: 32px;
 
+  &__item {
+    font-size: 15px;
+    letter-spacing: 0.2px;
+    color: $white;
+    @extend .text-overflow;
+  }
 }

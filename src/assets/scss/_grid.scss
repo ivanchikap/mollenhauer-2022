@@ -1,7 +1,13 @@
 .container {
-  padding: 0 15px;
-  max-width: 1230px;
+  padding: 0 1.5rem;
+  max-width: 147.1rem;
   margin: 0 auto;
+
+  &--header {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 16px;
+  }
 
   @include laptop {
     max-width: 960px;
