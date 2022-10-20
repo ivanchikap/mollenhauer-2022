@@ -1,8 +1,18 @@
 .h-card {
   position: relative;
-  width: 12.4rem;
-  height: 12.4rem;
+  width: 15.4rem;
+  height: 15.4rem;
   transform: rotate(45deg);
+  flex-shrink: 0;
+
+  @include laptop {
+    width: 11.4rem;
+    height: 11.4rem;
+  }
+
+  &:first-child, &:last-child {
+    margin-left: auto;
+  }
 
   &::after {
     content: '';
@@ -26,8 +36,20 @@
     left: 0;
     right: 0;
     background-color: rgba($blue, 0.74);
-    border: 9px solid rgba($blue, .9);
+    border: 9px solid transparent;
     z-index: 3;
+
+    &--blue {
+      border-color:rgba($blue, .9);
+    }
+
+    &--orange {
+      border-color:rgba($orange, .74);
+    }
+
+    &--white {
+      border-color:rgba($white, .74);
+    }
 
      * {
        transform: rotate(-45deg);
