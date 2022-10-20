@@ -1,7 +1,7 @@
 .header {
   position: relative;
   min-height: 104rem;
-  background-image: linear-gradient(180deg, $blue 0%, rgba($blue, 0) 62%, transparent 100%), url(../images/main-bg.jpg);
+  background-image: linear-gradient(180deg, $blue 0%, rgba($blue, 0) 62%, transparent 100%), url(../images/main-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50%;
@@ -28,9 +28,82 @@
   }
 
   &__top {
+    width: 100%;
     position: relative;
     z-index: 4;
-    padding: 0.5rem;
     min-height: 4rem;
+  }
+
+  &__logo {
+    max-width: 26.3rem;
+    margin-bottom: 1rem;
+    flex-shrink: 0;
+
+    &::after {
+      content: '';
+      width: 24rem;
+      height: 24rem;
+      position: absolute;
+      left: 18rem;
+      top: 0;
+      background: url(../images/logo-line.svg) no-repeat center / contain;
+    }
+  }
+
+  &__center {
+    margin-top: 15rem;
+  }
+
+  &__main {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__left, &__right {
+    width: 50%;
+  }
+
+  &__title {
+    font-size: 6.4rem;
+    line-height: 1.1;
+    letter-spacing: -1.46526px;
+    color: #F7F7F7;
+  }
+
+  &__content {
+    margin-top: 2.4rem;
+    font-size: 2.5rem;
+    line-height: 1.1;
+    color: $white;
+
+    p + p {
+      margin-top: 2.8rem;
+    }
+  }
+
+  &__actions {
+    display: flex;
+  }
+
+  &__actions-wrap {
+    margin-left: 1.6rem;
+  }
+
+  &__menu-btn {
+    display: none;
+  }
+
+  &__main {
+    position: relative;
+    z-index: 9;
+  }
+
+  &__main-actions {
+    margin-top: 4rem;
+
+    .btn + .btn {
+      margin-left: 1.6rem;
+    }
   }
 }

@@ -1,0 +1,41 @@
+.lang {
+  display: flex;
+  padding: 1.9rem 1.7rem;
+  background-color: $white;
+  gap: 1.2rem;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    color: rgba($blue, .4);
+    transition: color .2s linear;
+
+    &.active, &:hover, &:focus {
+      text-decoration: underline;
+      color: $blue;
+    }
+
+    &::before {
+      content: '';
+      width: 1.2rem;
+      height: 1.2rem;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      margin-right: .4rem;
+    }
+
+    &--de::before {
+      background-image: url(../images/de-icon.svg);
+    }
+
+    &--en::before {
+      background-image: url(../images/en-icon.svg);
+    }
+
+    &--fr::before {
+      background-image: url(../images/fr-icon.svg);
+    }
+  }
+}

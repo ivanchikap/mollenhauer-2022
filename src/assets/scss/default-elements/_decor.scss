@@ -1,0 +1,30 @@
+.decor {
+  position: absolute;
+  top: 20%;
+  right: -42rem;
+  width: 62rem;
+  height: 62rem;
+  background-color: transparent;
+  transform: rotate(45deg);
+  border: 1px solid rgba($white, .8);
+
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    background-color: transparent;
+    width: 62rem;
+    height: 62rem;
+  }
+
+  &::before {
+    left: -2rem;
+    top: -2rem;
+    background-color: rgba($orange, .8);
+  }
+
+  &::after {
+    left: -4rem;
+    top: -4rem;
+    border: 1px solid rgba(#FF7C40, .8);
+  }
+}

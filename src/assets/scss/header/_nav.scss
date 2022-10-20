@@ -1,14 +1,36 @@
 .nav {
+  $root: &;
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 0;
-  gap: 32px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 1.5rem 0 5rem;
+  gap: 4px 38px;
 
   &__item {
-    font-size: 15px;
+    position: relative;
+    padding: .8rem 0.2rem;
+    font-size: 1.5rem;
     letter-spacing: 0.2px;
     color: $white;
     @extend .text-overflow;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 4px;
+      background-color: $orange;
+      transition: width .1s ease;
+    }
+
+    &:hover::after, &:focus::after {
+      width: 100%;
+    }
+
+    &.active::after {
+      width: 100%;
+    }
   }
 }

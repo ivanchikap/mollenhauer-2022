@@ -1,0 +1,43 @@
+.h-card {
+  position: relative;
+  width: 12.4rem;
+  height: 12.4rem;
+  transform: rotate(45deg);
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: -1.5rem;
+    bottom: -2rem;
+    background-color: transparent;
+    border: 1px solid $orange;
+    z-index: -1;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgba($blue, 0.74);
+    border: 9px solid rgba($blue, .9);
+    z-index: 3;
+
+     * {
+       transform: rotate(-45deg);
+     }
+  }
+
+  &__title {
+    font-weight: 900;
+    font-size: 2.2rem;
+    line-height: .85;
+    color: #FFFFFF;
+  }
+}

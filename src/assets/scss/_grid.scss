@@ -6,7 +6,11 @@
   &--header {
     display: flex;
     justify-content: space-between;
-    padding-right: 16px;
+    align-items: center;
+    padding: 4.8rem 0 4.8rem 4.8rem;
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
   }
 
   @include laptop {

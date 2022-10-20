@@ -1,0 +1,47 @@
+.btn {
+  display: inline-block;
+  text-align: center;
+  @extend .text-overflow;
+  font-weight: 600;
+  font-size: 1.5rem;
+  letter-spacing: 0.3px;
+  color: $white;
+  transition: background-color .2s linear;
+
+  &--big {
+    padding: 1.9rem 1.8rem;
+  }
+
+  &--orange {
+    min-width: 14.3rem;
+    background-color: $orange;
+
+    &:hover {
+      background-color: $orange-dark;
+    }
+  }
+
+  &--default {
+    padding: 1.7rem 1.8rem 1.6rem 1.8rem;
+  }
+
+  &--transparent {
+    color: $white;
+    background: rgba($blue, 0.6);
+    border: 2px solid $white;
+    transition: color .2s linear, background-color .2s linear;
+
+    &:hover {
+      background-color: $white;
+      color: $blue;
+    }
+  }
+
+  &--white {
+    background-color: $white;
+
+    &:hover {
+      background-color: $bg-gray;
+    }
+  }
+}
